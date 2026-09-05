@@ -31,16 +31,19 @@
 
 
 @media (max-width: 900px) {
-  .library-hero { min-height: auto; padding-block: 4rem 0; }
-  .library-hero-grid { grid-template-columns: 1fr; }
-  .library-intro { padding-bottom: 1rem; }
+  .library { padding-top: 60px; }
+  .library-hero { min-height: auto; padding-block: 2rem 0; }
+  .library-hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .library-intro { padding-bottom: 0; }
+  .library-intro h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+  .library-intro .prosa { margin-top: 0.8rem; font-size: 0.9rem; }
   .shelf-section { transform: none; }
-  .shelf-stage { min-height: 390px; padding-bottom: 42px; }
-  .shelf-books { gap: 0.25rem; height: 280px; }
+  .shelf-stage { min-height: 300px; padding-bottom: 32px; }
+  .shelf-books { gap: 0.25rem; height: 240px; }
   .book-pages { right: -9px; width: 9px; }
   .book-spine { width: 27px; padding-inline: 0.2rem; }
   .book-status { display: none; }
-  .shelf-board { right: 0; bottom: 28px; left: 0; height: 14px; }
+  .shelf-board { right: 0; bottom: 24px; left: 0; height: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
