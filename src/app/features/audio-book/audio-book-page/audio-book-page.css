@@ -1,0 +1,36 @@
+:host { display: block; }
+.audio-book-page { min-height: 100svh; padding-top: 74px; }
+.audio-book-hero { display: grid; min-height: calc(100svh - 74px); grid-template-columns: minmax(0, 1fr) minmax(14rem, .62fr); align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.audio-book-copy { max-width: 40rem; }
+.back-link { display: inline-block; margin-bottom: clamp(2.5rem, 6vw, 5rem); color: var(--neve-tenue); font-family: var(--fonte-util); font-size: .68rem; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.back-link:hover { color: var(--ouro-claro); }
+.audio-book-page h1 { max-width: 12ch; margin-bottom: 1rem; }
+.audio-book-page .prosa { margin-bottom: 1.6rem; }
+.audio-book-art { width: min(100%, 24rem); margin: 0 auto; filter: drop-shadow(18px 24px 18px rgb(0 0 0 / 52%)); }
+.audio-book-art img { width: 100%; height: auto; border-radius: 50%; }
+.player-note { margin: .65rem 0 0; color: var(--neve-tenue); font-size: .78rem; }
+.availability { max-width: 37ch; margin: 1.3rem 0 0; color: var(--neve-fosca); line-height: 1.65; }
+.chapters { padding-block: 2rem 4rem; }
+.chapters-heading { display: flex; align-items: end; justify-content: space-between; gap: 3rem; margin-bottom: 2rem; }
+.chapters-heading h2 { max-width: 16ch; }
+.chapters-note { max-width: 32ch; margin: 0; color: var(--neve-tenue); font-size: .9rem; line-height: 1.6; }
+.chapter-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.chapter-card { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); align-items: center; gap: 1rem; min-width: 0; padding: .75rem; border: 1px solid rgb(156 170 185 / 14%); background: rgb(14 19 27 / 42%); }
+.chapter-art { width: 5.5rem; aspect-ratio: 1; object-fit: contain; }
+.chapter-content { min-width: 0; }
+.chapter-number { margin: 0 0 .25rem; color: var(--ouro); font-family: var(--fonte-util); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; }
+.chapter-card h3 { margin: 0 0 .75rem; color: var(--neve); font-family: var(--fonte-titulo); font-size: 1rem; line-height: 1.2; }
+.chapter-card audio { display: block; width: 100%; height: 2rem; }
+.chapter-card .player-note { margin-top: .35rem; font-size: .68rem; }
+.book-pagination { display: flex; justify-content: space-between; padding-bottom: 3rem; }
+.book-pagination a { color: var(--ouro-claro); font-family: var(--fonte-util); font-size: .72rem; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.book-pagination a:hover { color: var(--neve); }
+@media (max-width: 800px) {
+  .audio-book-hero { grid-template-columns: 1fr; padding-block: 3rem; }
+  .back-link { margin-bottom: 2rem; }
+  .audio-book-art { width: min(75vw, 18rem); margin: 0; }
+  .chapters { padding-block: 1rem 3rem; }
+  .chapters-heading { display: block; }
+  .chapters-note { margin-top: 1rem; }
+  .chapter-list { grid-template-columns: 1fr; }
+}

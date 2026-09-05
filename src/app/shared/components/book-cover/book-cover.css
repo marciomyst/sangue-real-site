@@ -1,0 +1,123 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.book-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  outline-offset: 8px;
+}
+
+.book-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 390 / 624;
+}
+
+/* Miolo recuado: as folhas só aparecem na borda direita quando a capa gira. */
+.book-inside {
+  position: absolute;
+  top: 1.5%;
+  right: 0;
+  width: 91%;
+  height: 96.5%;
+  border: 1px solid #9b8957;
+  border-radius: 0 2px 2px 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #c5af72 0 1px,
+    #f1e3ba 1px 3px,
+    #d5c18b 3px 4px,
+    #f6eac5 4px 6px
+  );
+  box-shadow:
+    9px 12px 24px rgb(0 0 0 / 48%),
+    inset -2px 0 0 #887646,
+    inset -4px 0 0 #f7edcf,
+    inset -6px 0 0 #a9945c,
+    inset -8px 0 0 #efe0b2;
+}
+
+.book-image {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2px 4px 4px 2px;
+  box-shadow: 10px 24px 30px -12px rgb(0 0 0 / 70%);
+  cursor: pointer;
+  transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
+  transform-origin: left center;
+  transition: transform 0.65s ease, box-shadow 0.65s ease;
+}
+
+.book-container:hover .book-image,
+.book-container:focus-visible .book-image {
+  box-shadow: 8px 20px 28px -14px rgb(0 0 0 / 62%);
+  transform: perspective(2000px) rotateY(0deg) translateX(0) scaleX(1);
+}
+
+.book-image picture,
+.book-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.book-image img {
+  object-fit: cover;
+}
+
+/* Sombra no encontro da capa com a lombada, herdada do comportamento do modelo. */
+.book-effect {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  width: 20px;
+  border-left: 2px solid rgb(0 0 0 / 15%);
+  background: linear-gradient(90deg, rgb(0 0 0 / 24%), transparent);
+  opacity: 0.72;
+  pointer-events: none;
+  transition: left 0.65s ease, opacity 0.65s ease;
+}
+
+.book-container:hover .book-effect,
+.book-container:focus-visible .book-effect {
+  left: 14px;
+  opacity: 0.48;
+}
+
+.book-light {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 57%, rgb(255 255 255 / 24%) 100%);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .book-image {
+    transform: perspective(1400px) rotateY(-15deg) translateX(-7px) scaleX(0.95);
+  }
+
+  .book-container:hover .book-image,
+  .book-container:focus-visible .book-image {
+    transform: perspective(1400px) rotateY(0deg) translateX(0) scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-image,
+  .book-effect {
+    transition: none;
+  }
+}

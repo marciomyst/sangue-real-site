@@ -1,0 +1,22 @@
+:host { display: block; }
+.universo-page { overflow: hidden; padding-top: 74px; }
+.universo-section { display: grid; min-height: calc(100svh - 74px); align-items: center; padding-block: 2rem; }
+.universo-intro { max-width: 70ch; margin-top: 1.4rem; }
+.gemas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.15rem; margin-top: 2.8rem; }
+.gema-cartao { position: relative; display: block; min-height: 245px; padding: 1.6rem 1.35rem; overflow: hidden; border: 1px solid var(--pedra-borda); border-top: 2px solid var(--cor); border-radius: var(--raio); background: var(--pedra); text-decoration: none; transition: border-color .35s ease, transform .35s ease, background .35s ease; }
+.gema-cartao:hover { border-color: var(--ouro-fosco); background: var(--pedra-alta); transform: translateY(-3px); }
+.gema-cartao--azul { --cor: var(--turquesa); --cor-rotulo: #5fb3d0; }
+.gema-cartao--carmesim { --cor: var(--carmesim); --cor-rotulo: #e8797e; }
+.gema-cartao--verde { --cor: var(--dourado); --cor-rotulo: #e3b857; }
+.gema-cartao--ouro { --cor: var(--neve); --cor-rotulo: var(--neve); }
+.gema-num { position: absolute; top: 1.25rem; right: 1.25rem; color: color-mix(in srgb, var(--cor), transparent 40%); font-family: var(--fonte-titulo); font-size: 1.55rem; font-weight: 600; line-height: 1; }
+.gema-cartao-topo { min-height: 1.8rem; }
+.gema-cartao .pastilha { border-color: color-mix(in srgb, var(--cor), transparent 58%); color: var(--cor-rotulo); background: color-mix(in srgb, var(--cor), transparent 91%); font-size: .6rem; }
+.rotulo { display: block; margin-top: 1.8rem; color: var(--cor-rotulo); font-family: var(--fonte-util); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; }
+.gema-cartao h2 { margin-top: .65rem; font-size: 1.15rem; }
+.gema-cartao p { margin: .65rem 0 0; color: var(--neve-fosca); font-size: .9rem; line-height: 1.62; }
+@media (max-width: 1080px) { .gemas { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) {
+  .universo-section { min-height: auto; padding-block: 4.5rem; }
+  .gemas { grid-template-columns: 1fr; }
+}

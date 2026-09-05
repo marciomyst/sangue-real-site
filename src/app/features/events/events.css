@@ -1,0 +1,29 @@
+:host { display: block; }
+.agenda-page { padding-top: 74px; }
+.agenda-section { display: grid; min-height: calc(100svh - 74px); align-items: center; padding-block: 2rem; }
+.agenda-intro { max-width: 68ch; margin-top: 1.4rem; }
+.filtros { display: flex; flex-wrap: wrap; gap: .55rem; margin: 2.4rem 0 2rem; }
+.filtro { border: 1px solid var(--pedra-borda); border-radius: 100px; padding: .62rem 1.15rem; background: transparent; color: var(--neve-fosca); cursor: pointer; font-family: var(--fonte-util); font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; transition: .28s ease; }
+.filtro:hover, .filtro.ativo { border-color: var(--ouro); color: var(--neve); }
+.filtro.ativo { background: var(--ouro); color: var(--noite); }
+.agenda-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); gap: 1.15rem; }
+.evento { display: flex; flex-direction: column; gap: .62rem; padding: 1.5rem 1.4rem; border: 1px solid var(--pedra-borda); border-left: 2px solid var(--ouro-fosco); border-radius: var(--raio); background: var(--pedra); transition: border-left-color .3s ease, transform .3s ease; }
+.evento:hover { border-left-color: var(--ouro); transform: translateX(3px); }
+.evento.feito { opacity: .72; border-left-color: var(--pedra-borda); }
+.evento .quando { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; color: var(--ouro); font-family: var(--fonte-util); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+.evento .quando .tipo { padding-left: .6rem; border-left: 1px solid var(--pedra-borda); color: var(--neve-tenue); }
+.evento h2 { font-size: 1rem; line-height: 1.4; }
+.evento p { margin: 0; color: var(--neve-fosca); font-size: .9rem; line-height: 1.6; }
+.evento .onde { margin-top: auto; padding-top: .5rem; color: var(--neve-tenue); font-family: var(--fonte-util); font-size: .74rem; letter-spacing: .03em; }
+.vazio { grid-column: 1 / -1; margin: 0; padding: 3.2rem 1rem; border: 1px dashed var(--pedra-borda); border-radius: var(--raio); color: var(--neve-tenue); text-align: center; }
+.parcerias-section { padding-top: 0; padding-bottom: clamp(4.5rem, 9vw, 7.5rem); }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem; margin-top: 2.4rem; }
+.bloco { display: flex; flex-direction: column; align-items: flex-start; padding: 1.6rem 1.4rem; border: 1px solid var(--pedra-borda); border-radius: var(--raio); background: var(--pedra); }
+.bloco h3 { margin-bottom: .65rem; font-size: 1.05rem; }
+.bloco p { margin: 0; color: var(--neve-fosca); font-size: .9rem; line-height: 1.62; }
+.bloco ul { margin: 1.2rem 0 1.4rem; padding-left: 1.15rem; color: var(--neve-fosca); font-size: .88rem; line-height: 1.8; }
+.bloco .btn { margin-top: auto; }
+@media (max-width: 700px) {
+  .agenda-section { min-height: auto; padding-block: 4.5rem; }
+  .duo { grid-template-columns: 1fr; }
+}

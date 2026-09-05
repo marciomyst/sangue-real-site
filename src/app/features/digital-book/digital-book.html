@@ -1,0 +1,40 @@
+<main class="library">
+  <section class="library-hero">
+    <div class="library-hero-grid container">
+      <div class="library-intro">
+        <p class="olho">Biblioteca de Sangue Real</p>
+        <h1>A estante digital da saga.</h1>
+        <p class="prosa">Escolha um volume para conhecer seu lugar na história. A coleção cresce sem antecipar o que ainda não foi publicado.</p>
+      </div>
+
+      <div class="shelf-section" aria-label="Estante virtual de Sangue Real">
+        <div class="shelf-stage">
+          <div class="shelf-glow" aria-hidden="true"></div>
+          <div class="shelf-books" role="list" aria-label="Volumes da saga">
+            @for (book of books; track book.number) {
+              <a
+                class="shelf-book"
+                [class.has-cover]="book.available"
+                [style.--book-color]="book.color"
+                [routerLink]="['/digital-book', book.slug]"
+                role="listitem"
+                [attr.aria-label]="book.title + ': ' + book.status">
+                <span class="book-spine book-spine-art">
+                  <picture>
+                    <source
+                      [attr.srcset]="'img/lombadas/' + book.spine + '-72.png 72w, img/lombadas/' + book.spine + '-144.png 144w, img/lombadas/' + book.spine + '-216.png 216w'"
+                      sizes="(max-width: 900px) 52px, 100px" />
+                    <img [src]="'img/lombadas/' + book.spine + '.png'" width="400" height="2172" alt="" />
+                  </picture>
+                </span>
+              </a>
+            }
+          </div>
+          <div class="shelf-board" aria-hidden="true"></div>
+          <div class="shelf-shadow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

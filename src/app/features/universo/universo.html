@@ -1,0 +1,23 @@
+<main class="universo-page">
+  <section class="universo-section">
+    <div class="container">
+      <p class="olho">Além dos sete volumes</p>
+      <h1>O universo, aos poucos.</h1>
+      <p class="prosa universo-intro">Sangue Real é maior do que qualquer volume sozinho conta. Estas são as quatro frentes em preparação — cartografias, retratos, ecologia e relíquias — que vão se abrindo conforme a saga avança.</p>
+
+      <div class="gemas futuros" aria-label="Frentes do universo em preparação">
+        @for (extra of items; track extra.number) {
+          <a class="gema-cartao" [class]="'gema-cartao--' + extra.accent" [routerLink]="['/universo', extra.slug]">
+            <span class="gema-num" aria-hidden="true">{{ extra.number }}</span>
+            <div class="gema-cartao-topo">
+              <span class="pastilha">Em preparação</span>
+            </div>
+            <span class="rotulo">{{ extra.kind }}</span>
+            <h2>{{ extra.title }}</h2>
+            <p>{{ extra.description }}</p>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+</main>

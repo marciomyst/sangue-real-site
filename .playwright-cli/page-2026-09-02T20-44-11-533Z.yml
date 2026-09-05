@@ -1,0 +1,74 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "Sangue Real — início" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e13]: Sangue Real
+      - navigation "Navegação principal" [ref=f1e14]:
+        - link "Lançamento" [ref=f1e15] [cursor=pointer]:
+          - /url: /digital-book
+        - link "Ler & Ouvir" [ref=f1e16] [cursor=pointer]:
+          - /url: /audio-book
+        - link "A saga" [ref=f1e17] [cursor=pointer]:
+          - /url: /saga
+        - link "O autor" [ref=f1e18] [cursor=pointer]:
+          - /url: /autor
+        - link "Agenda" [ref=f1e19] [cursor=pointer]:
+          - /url: /events
+        - link "Comprar" [ref=f1e20] [cursor=pointer]:
+          - /url: /digital-book
+  - main [ref=f1e22]:
+    - generic [ref=f1e24]:
+      - generic [ref=f1e25]:
+        - paragraph [ref=f1e26]: Sangue Real · Livro I
+        - heading "Sangue na Neve" [level=1] [ref=f1e27]:
+          - text: Sangue
+          - generic [ref=f1e28]: na Neve
+        - paragraph [ref=f1e29]: Márcio Luiz Rossato Gomes
+        - note "A profecia" [ref=f1e30]:
+          - generic [ref=f1e31]: Uma Ânfora de sangue real a preencher.
+          - generic [ref=f1e32]: Três essências a transformar.
+          - generic [ref=f1e33]: Do mal, Três Reinos a proteger.
+          - generic [ref=f1e34]: Uma morte para o equilíbrio restaurar.
+        - generic [ref=f1e35]:
+          - link "E-book e audiolivro" [ref=f1e36] [cursor=pointer]:
+            - /url: /digital-book
+          - link "Ler o começo" [ref=f1e37] [cursor=pointer]:
+            - /url: /digital-book
+      - generic [ref=f1e38]:
+        - img "Capa 3D de Sangue na Neve." [ref=f1e40]:
+          - 'img "Capa de Sangue na Neve: uma ânfora azul-esverdeada com o Nó Trino e três gemas, sob um altar de pedra, contra a neve." [ref=f1e43] [cursor=pointer]'
+        - generic [ref=f1e44]: Livro I · Sangue Real
+  - contentinfo [ref=f1e46]:
+    - generic [ref=f1e47]:
+      - generic [ref=f1e48]:
+        - generic [ref=f1e49]:
+          - link "Sangue Real" [ref=f1e50] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=f1e59]: Uma saga de sete volumes sobre nomes apagados, cuidado excessivo e o preço de descobrir quem se é.
+        - generic [ref=f1e60]:
+          - heading "Navegar" [level=2] [ref=f1e61]
+          - list [ref=f1e62]:
+            - listitem [ref=f1e63]:
+              - link "Livro digital" [ref=f1e64] [cursor=pointer]:
+                - /url: /digital-book
+            - listitem [ref=f1e65]:
+              - link "Audio-book" [ref=f1e66] [cursor=pointer]:
+                - /url: /audio-book
+            - listitem [ref=f1e67]:
+              - link "A saga" [ref=f1e68] [cursor=pointer]:
+                - /url: /saga
+            - listitem [ref=f1e69]:
+              - link "Eventos" [ref=f1e70] [cursor=pointer]:
+                - /url: /events
+        - generic [ref=f1e71]:
+          - heading "Projeto" [level=2] [ref=f1e72]
+          - list [ref=f1e73]:
+            - listitem [ref=f1e74]: Sangue na Neve
+            - listitem [ref=f1e75]: Livro I
+            - listitem [ref=f1e76]:
+              - link "Sobre o autor" [ref=f1e77] [cursor=pointer]:
+                - /url: /autor
+      - generic [ref=f1e78]:
+        - generic [ref=f1e79]: © 2026 Márcio Luiz Rossato Gomes. Todos os direitos reservados.
+        - generic [ref=f1e80]: Texto, projeto gráfico e capa do autor.

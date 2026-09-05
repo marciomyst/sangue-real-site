@@ -1,0 +1,44 @@
+# Dependências e caches
+src/node_modules/
+src/.angular/
+src/.cache/
+**/node_modules/
+**/.angular/cache/
+
+# Saídas geradas
+src/dist/
+src/out-tsc/
+src/tmp/
+src/out/
+**/coverage/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Ambiente local e segredos
+.env
+.env.*
+!.env.example
+
+# IDEs e arquivos do sistema
+.idea/
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*

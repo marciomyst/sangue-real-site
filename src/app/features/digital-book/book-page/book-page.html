@@ -1,0 +1,37 @@
+<main class="book-page">
+  <section class="book-page-hero container">
+    <div class="book-page-copy">
+      <a class="back-link" routerLink="/digital-book">← Voltar à estante</a>
+      <p class="olho">Sangue Real · Livro {{ book().number }}</p>
+      <h1>{{ book().title }}</h1>
+      <p class="prosa">{{ book().description }}</p>
+      <span class="status" [class.status-available]="book().available">{{ book().status }}</span>
+
+      @if (book().available) {
+        <p class="availability">A página do volume está pronta; a experiência de leitura digital será integrada a este espaço.</p>
+      } @else {
+        <p class="availability">Este volume ainda não possui leitura digital disponível.</p>
+      }
+    </div>
+
+    <figure class="book-page-spine">
+      <picture>
+        <source
+          [attr.srcset]="'img/lombadas/' + book().spine + '-72.png 72w, img/lombadas/' + book().spine + '-144.png 144w, img/lombadas/' + book().spine + '-216.png 216w'"
+          sizes="(max-width: 800px) 110px, 190px" />
+        <img [src]="'img/lombadas/' + book().spine + '.png'" width="400" height="2172" [alt]="'Lombada de ' + book().title" />
+      </picture>
+    </figure>
+  </section>
+
+  <nav class="book-pagination container" aria-label="Navegação entre volumes">
+    @if (previousBook(); as previous) {
+      <a routerLink="/digital-book/{{ previous.slug }}">← Livro {{ previous.number }}</a>
+    } @else {
+      <span></span>
+    }
+    @if (nextBook(); as next) {
+      <a routerLink="/digital-book/{{ next.slug }}">Livro {{ next.number }} →</a>
+    }
+  </nav>
+</main>

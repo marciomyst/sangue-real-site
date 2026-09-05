@@ -1,0 +1,59 @@
+<main class="agenda-page">
+  <section id="agenda" class="agenda-section">
+    <div class="container">
+      <p class="olho">Agenda e registro</p>
+      <h1>Onde o livro encontra as pessoas.</h1>
+      <p class="prosa agenda-intro">Oficinas em escolas públicas, encontros com clubes de leitura e sessões de lançamento. O que já aconteceu fica registrado aqui.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar eventos">
+        <button class="filtro" type="button" [class.ativo]="activeFilter() === 'todos'" [attr.aria-pressed]="activeFilter() === 'todos'" (click)="setFilter('todos')">Todos</button>
+        <button class="filtro" type="button" [class.ativo]="activeFilter() === 'proximo'" [attr.aria-pressed]="activeFilter() === 'proximo'" (click)="setFilter('proximo')">Próximos</button>
+        <button class="filtro" type="button" [class.ativo]="activeFilter() === 'feito'" [attr.aria-pressed]="activeFilter() === 'feito'" (click)="setFilter('feito')">Realizados</button>
+      </div>
+
+      <div class="agenda-list">
+        @for (event of filteredAgenda; track event.title + event.location) {
+          <article class="evento" [class.feito]="event.state === 'feito'">
+            <div class="quando"><span>{{ event.date }}</span><span class="tipo">{{ event.type }}</span></div>
+            <h2>{{ event.title }}</h2>
+            <p>{{ event.text }}</p>
+            <span class="onde">{{ event.location }}</span>
+          </article>
+        } @empty {
+          <p class="vazio">Ainda não há eventos realizados.</p>
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="regra" aria-hidden="true"><span></span><span></span></div>
+
+  <section id="parcerias" class="parcerias-section">
+    <div class="container">
+      <p class="olho">Para quem trabalha com livros</p>
+      <h2>Clubes de leitura e imprensa.</h2>
+      <div class="duo">
+        <div class="bloco">
+          <h3>Seu clube quer ler <em>Sangue na Neve</em>?</h3>
+          <p>Enviamos exemplares e tags para clubes de leitura de todo o país, e o autor participa do encontro — presencial ou online.</p>
+          <ul>
+            <li>Exemplares em capa dura para o clube</li>
+            <li>Tags com acesso ao e-book e ao audiolivro</li>
+            <li>Roteiro de discussão com o autor</li>
+          </ul>
+          <button class="btn btn-linha btn-min" type="button">Inscrever meu clube</button>
+        </div>
+        <div class="bloco">
+          <h3>Kit de imprensa</h3>
+          <p>Material para resenhas, matérias e divulgação: capa em alta resolução, sinopse, ficha técnica, trechos liberados e foto do autor.</p>
+          <ul>
+            <li>Capa e contracapa em alta</li>
+            <li>Sinopse curta e longa</li>
+            <li>Trechos autorizados para citação</li>
+          </ul>
+          <button class="btn btn-linha btn-min" type="button">Solicitar o kit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,25 @@
+<main class="universo-item-page">
+  <section class="universo-item-hero container">
+    <div class="universo-item-copy">
+      <a class="back-link" routerLink="/universo">← Voltar ao universo</a>
+      <p class="olho">Universo · {{ item().number }}</p>
+      <h1>{{ item().title }}</h1>
+      <p class="item-kind">{{ item().kind }}</p>
+      <p class="prosa">{{ item().detail }}</p>
+      <div class="item-notice">
+        <span class="pastilha">Em preparação</span>
+        <p>{{ item().description }}</p>
+      </div>
+    </div>
+    <div class="item-sinal" [class]="'item-sinal--' + item().accent" aria-hidden="true"><span>{{ item().number }}</span></div>
+  </section>
+
+  <nav class="item-pagination container" aria-label="Navegação entre áreas do universo">
+    @if (previousItem(); as previous) {
+      <a [routerLink]="['/universo', previous.slug]">← {{ previous.title }}</a>
+    } @else { <span></span> }
+    @if (nextItem(); as next) {
+      <a [routerLink]="['/universo', next.slug]">{{ next.title }} →</a>
+    }
+  </nav>
+</main>

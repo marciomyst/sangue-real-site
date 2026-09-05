@@ -1,0 +1,71 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Sangue Real — início" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e13]: Sangue Real
+      - navigation "Navegação principal" [ref=e14]:
+        - link "Lançamento" [ref=e15] [cursor=pointer]:
+          - /url: /digital-book
+        - link "Ler" [ref=e16] [cursor=pointer]:
+          - /url: /digital-book
+        - link "Ouvir" [ref=e17] [cursor=pointer]:
+          - /url: /audio-book
+        - link "A saga" [ref=e18] [cursor=pointer]:
+          - /url: /saga
+        - link "O autor" [ref=e19] [cursor=pointer]:
+          - /url: /autor
+        - link "Agenda" [ref=e20] [cursor=pointer]:
+          - /url: /events
+        - link "Comprar" [ref=e21] [cursor=pointer]:
+          - /url: /digital-book
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - link "← Voltar à estante" [ref=e26] [cursor=pointer]:
+          - /url: /digital-book
+        - paragraph [ref=e27]: Sangue Real · Livro III
+        - heading "Sangue e Ruína" [level=1] [ref=e28]
+        - paragraph [ref=e29]: O terceiro volume será anunciado no tempo da história.
+        - generic [ref=e30]: Em escrita
+        - paragraph [ref=e31]: Este volume ainda não possui leitura digital disponível.
+      - figure [ref=e32]:
+        - img "Lombada de Sangue e Ruína" [ref=e34]
+    - navigation "Navegação entre volumes" [ref=e35]:
+      - link "← Livro II" [ref=e36] [cursor=pointer]:
+        - /url: /digital-book/sangue-e-lagrimas
+      - link "Livro IV →" [ref=e37] [cursor=pointer]:
+        - /url: /digital-book/sangue-e-sombras
+  - contentinfo [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - link "Sangue Real" [ref=e43] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e52]: Uma saga de sete volumes sobre nomes apagados, cuidado excessivo e o preço de descobrir quem se é.
+        - generic [ref=e53]:
+          - heading "Navegar" [level=2] [ref=e54]
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "Livro digital" [ref=e57] [cursor=pointer]:
+                - /url: /digital-book
+            - listitem [ref=e58]:
+              - link "Audio-book" [ref=e59] [cursor=pointer]:
+                - /url: /audio-book
+            - listitem [ref=e60]:
+              - link "A saga" [ref=e61] [cursor=pointer]:
+                - /url: /saga
+            - listitem [ref=e62]:
+              - link "Eventos" [ref=e63] [cursor=pointer]:
+                - /url: /events
+        - generic [ref=e64]:
+          - heading "Projeto" [level=2] [ref=e65]
+          - list [ref=e66]:
+            - listitem [ref=e67]: Sangue na Neve
+            - listitem [ref=e68]: Livro I
+            - listitem [ref=e69]:
+              - link "Sobre o autor" [ref=e70] [cursor=pointer]:
+                - /url: /autor
+      - generic [ref=e71]:
+        - generic [ref=e72]: © 2026 Márcio Luiz Rossato Gomes. Todos os direitos reservados.
+        - generic [ref=e73]: Texto, projeto gráfico e capa do autor.

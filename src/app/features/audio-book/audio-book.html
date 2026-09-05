@@ -1,0 +1,40 @@
+<main class="audio-page">
+  <section class="audio-hero container section">
+    <div class="audio-intro">
+      <p class="eyebrow">Escuta · Sangue Real</p>
+      <h1>A saga em <span>áudio</span></h1>
+      <p class="prosa">As artes dos audiobooks acompanham os sete volumes da saga. Cada disco guarda a identidade de um capítulo desta história.</p>
+    </div>
+    <div class="audio-mark" aria-hidden="true">
+      <span class="audio-mark-ring"></span>
+      <span class="audio-mark-core">◖</span>
+    </div>
+  </section>
+
+  <div class="regra" aria-hidden="true"><span>✦</span></div>
+
+  <section class="audio-catalogo container section" aria-labelledby="audio-titulo">
+    <div class="audio-heading">
+      <div>
+        <p class="eyebrow">Coleção</p>
+        <h2 id="audio-titulo">As vozes dos volumes</h2>
+      </div>
+      <p>Uma coleção visual para acompanhar a experiência sonora de <em>Sangue Real</em>.</p>
+    </div>
+
+    <div class="audio-grid">
+      @for (book of books; track book.number) {
+        <article class="audio-card">
+          <div class="audio-art-wrap">
+            <img class="audio-art" [src]="'/img/audiobooks/livro-' + book.number.toLowerCase() + '.png'" [alt]="'Arte do audiobook ' + book.title" />
+          </div>
+          <div class="audio-card-info">
+            <p class="audio-volume">{{ book.status }}</p>
+            <h3>{{ book.title }}</h3>
+            <span class="audio-state">Arte oficial da coleção</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</main>

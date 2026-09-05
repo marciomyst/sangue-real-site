@@ -1,0 +1,58 @@
+<main class="audio-book-page">
+  <section class="audio-book-hero container">
+    <div class="audio-book-copy">
+      <a class="back-link" routerLink="/audio-book">← Voltar aos audiobooks</a>
+      <p class="olho">Ouvir · Livro {{ book().number }}</p>
+      <h1>{{ book().title }}</h1>
+      <p class="prosa">{{ book().description }}</p>
+
+      @if (!hasAudio()) {
+        <p class="availability">A arte deste volume já está preparada. O áudio será disponibilizado neste espaço quando o arquivo estiver pronto.</p>
+      }
+    </div>
+
+    <figure class="audio-book-art">
+      <img [src]="'/img/audiobooks/livro-' + book().number.toLowerCase() + '.png'" [alt]="'Arte do audiobook ' + book().title" />
+    </figure>
+  </section>
+
+  @if (hasAudio()) {
+    <section class="chapters container" aria-labelledby="chapters-title">
+      <div class="chapters-heading">
+        <div>
+          <p class="olho">Faixas do audiobook</p>
+          <h2 id="chapters-title">Ouça capítulo a capítulo.</h2>
+        </div>
+        <p class="chapters-note">Arquivo de teste repetido temporariamente em todas as faixas.</p>
+      </div>
+
+      <div class="chapter-list">
+        @for (chapter of chapters; track chapter.number) {
+          <article class="chapter-card">
+            <img class="chapter-art" src="/img/audiobooks/livro-i.png" alt="" aria-hidden="true" />
+            <div class="chapter-content">
+              <p class="chapter-number">Capítulo {{ chapter.number }}</p>
+              <h3>{{ chapter.title }}</h3>
+              <audio controls preload="none">
+                <source src="/audiobooks/livro-i/capitulo-01.mp3" type="audio/mpeg" />
+                Seu navegador não suporta a reprodução de áudio.
+              </audio>
+              <p class="player-note">Arquivo de teste · capítulo {{ chapter.number }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  }
+
+  <nav class="book-pagination container" aria-label="Navegação entre audiobooks">
+    @if (previousBook(); as previous) {
+      <a [routerLink]="['/audio-book', previous.slug]">← Livro {{ previous.number }}</a>
+    } @else {
+      <span></span>
+    }
+    @if (nextBook(); as next) {
+      <a [routerLink]="['/audio-book', next.slug]">Livro {{ next.number }} →</a>
+    }
+  </nav>
+</main>

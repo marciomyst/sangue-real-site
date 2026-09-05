@@ -1,0 +1,104 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Sangue Real — início" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e13]: Sangue Real
+      - navigation "Navegação principal" [ref=e14]:
+        - link "Lançamento" [ref=e15] [cursor=pointer]:
+          - /url: /digital-book
+        - link "Ler" [ref=e16] [cursor=pointer]:
+          - /url: /digital-book
+        - link "Ouvir" [ref=e17] [cursor=pointer]:
+          - /url: /audio-book
+        - link "A saga" [ref=e18] [cursor=pointer]:
+          - /url: /saga
+        - link "O autor" [ref=e19] [cursor=pointer]:
+          - /url: /autor
+        - link "Agenda" [ref=e20] [cursor=pointer]:
+          - /url: /events
+        - link "Comprar" [ref=e21] [cursor=pointer]:
+          - /url: /digital-book
+  - main [ref=e23]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - paragraph [ref=e27]: Biblioteca de Sangue Real
+        - heading "A estante digital da saga." [level=1] [ref=e28]
+        - paragraph [ref=e29]: Escolha um volume para conhecer seu lugar na história. A coleção cresce sem antecipar o que ainda não foi publicado.
+      - generic "Estante virtual de Sangue Real" [ref=e30]:
+        - list "Volumes da saga" [ref=e32]:
+          - 'listitem "Sangue na Neve: Livro I" [ref=e33] [cursor=pointer]'
+          - 'listitem "Volume II: Em escrita" [ref=e36] [cursor=pointer]':
+            - generic [ref=e37]:
+              - generic [ref=e38]: II
+              - generic [ref=e39]: Volume II
+              - generic [ref=e40]: Em escrita
+          - 'listitem "Volume III: Em escrita" [ref=e41] [cursor=pointer]':
+            - generic [ref=e42]:
+              - generic [ref=e43]: III
+              - generic [ref=e44]: Volume III
+              - generic [ref=e45]: Em escrita
+          - 'listitem "Volume IV: Planejado" [ref=e46] [cursor=pointer]':
+            - generic [ref=e47]:
+              - generic [ref=e48]: IV
+              - generic [ref=e49]: Volume IV
+              - generic [ref=e50]: Planejado
+          - 'listitem "Volume V: Planejado" [ref=e51] [cursor=pointer]':
+            - generic [ref=e52]:
+              - generic [ref=e53]: V
+              - generic [ref=e54]: Volume V
+              - generic [ref=e55]: Planejado
+          - 'listitem "Volume VI: Planejado" [ref=e56] [cursor=pointer]':
+            - generic [ref=e57]:
+              - generic [ref=e58]: VI
+              - generic [ref=e59]: Volume VI
+              - generic [ref=e60]: Planejado
+          - 'listitem "Volume VII: Planejado" [ref=e61] [cursor=pointer]':
+            - generic [ref=e62]:
+              - generic [ref=e63]: VII
+              - generic [ref=e64]: Volume VII
+              - generic [ref=e65]: Planejado
+    - generic [ref=e68]:
+      - paragraph [ref=e69]: Volume I
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - heading "Sangue na Neve" [level=2] [ref=e72]
+          - paragraph [ref=e73]: O início de Sangue Real, uma saga de fantasia, aventura e suspense em sete volumes.
+        - generic [ref=e74]:
+          - generic [ref=e75]: Livro I
+          - paragraph [ref=e76]: O ambiente de leitura deste volume será integrado a esta biblioteca.
+          - link "Conhecer a saga" [ref=e77] [cursor=pointer]:
+            - /url: /saga
+  - contentinfo [ref=e79]:
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - link "Sangue Real" [ref=e83] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e92]: Uma saga de sete volumes sobre nomes apagados, cuidado excessivo e o preço de descobrir quem se é.
+        - generic [ref=e93]:
+          - heading "Navegar" [level=2] [ref=e94]
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - link "Livro digital" [ref=e97] [cursor=pointer]:
+                - /url: /digital-book
+            - listitem [ref=e98]:
+              - link "Audio-book" [ref=e99] [cursor=pointer]:
+                - /url: /audio-book
+            - listitem [ref=e100]:
+              - link "A saga" [ref=e101] [cursor=pointer]:
+                - /url: /saga
+            - listitem [ref=e102]:
+              - link "Eventos" [ref=e103] [cursor=pointer]:
+                - /url: /events
+        - generic [ref=e104]:
+          - heading "Projeto" [level=2] [ref=e105]
+          - list [ref=e106]:
+            - listitem [ref=e107]: Sangue na Neve
+            - listitem [ref=e108]: Livro I
+            - listitem [ref=e109]:
+              - link "Sobre o autor" [ref=e110] [cursor=pointer]:
+                - /url: /autor
+      - generic [ref=e111]:
+        - generic [ref=e112]: © 2026 Márcio Luiz Rossato Gomes. Todos os direitos reservados.
+        - generic [ref=e113]: Texto, projeto gráfico e capa do autor.
