@@ -38,10 +38,10 @@
   .library-intro h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
   .library-intro .prosa { margin-top: 0.8rem; font-size: 0.9rem; }
   .shelf-section { transform: none; }
-  .shelf-stage { min-height: 330px; padding-bottom: 32px; }
-  .shelf-books { gap: 0.25rem; height: 264px; }
+  .shelf-stage { min-height: 363px; padding-bottom: 32px; }
+  .shelf-books { gap: 0.25rem; height: 290px; }
   .book-pages { right: -9px; width: 9px; }
-  .book-spine { width: 30px; padding-inline: 0.2rem; }
+  .book-spine { width: 33px; padding-inline: 0.2rem; }
   .book-status { display: none; }
   .shelf-board { right: 0; bottom: 24px; left: 0; height: 12px; }
 }
