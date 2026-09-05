@@ -1,9 +1,10 @@
 [build]
-command = "pnpm build"
-publish = "dist/sangue-real-site"
+command = "corepack enable && pnpm build"
+publish = "dist/sangue-real-site/browser"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
+NETLIFY_USE_PNPM = "true"
 
 [[redirects]]
 from = "/*"
